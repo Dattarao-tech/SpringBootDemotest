@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "spring.datasource.server",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.server'"
+  },
+  {
+    "name": "spring.port",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.port'"
+  },
+  {
+    "name": "server.spring",
+    "type": "java.lang.String",
+    "description": "A description for 'server.spring'"
+  },
+  {
+    "name": "server.jpa",
+    "type": "java.lang.String",
+    "description": "A description for 'server.jpa'"
+  },
+  {
+    "name": "server.open-in-view",
+    "type": "java.lang.String",
+    "description": "A description for 'server.open-in-view'"
+  }
+]}

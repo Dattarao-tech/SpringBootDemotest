@@ -1,0 +1,48 @@
+package com.Demoexample2.Demowork.entity;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+@Entity
+@Table(name="subject")
+public class Subject {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="subject_id")
+	private Long id;
+	@Column(name="subject_name",nullable=false)
+	private String subject_name;
+	@Column(name="max_marks")
+	private int max_marks;
+	@Column(name="min_pass_marks")
+	private int min_pass_marks;
+	@Column(name="ismadtory_for_passing")
+	private boolean ismadtory_forpassing;
+	
+	@OneToOne
+	@JoinColumn(name="course_name")
+	private Course course;
+	
+	
+}
